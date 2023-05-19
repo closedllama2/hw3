@@ -1,0 +1,18 @@
+<h2>New Post</h2>
+
+<%= form_with :model => @post do |form| %>
+  <p>
+    <%= form.label "title" %>
+    <%= form.text_field "title" %>
+  </p>
+
+
+  <p>
+  <%= form.date_field "posted_on" %>
+  </p>
+
+  <%= form.hidden_field "place_id" %>
+  <%= form.submit %>
+<% end %>
+
+<p><a href="/places/<%= @place["id"]%>">Back to <%= @place["name"]%></a></p>
